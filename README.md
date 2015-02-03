@@ -8,3 +8,14 @@ python的micro web框架 Deny,只需要在项目目录中包含一个deny.py文�
  window中查看用户临时文件目录会有一个“denied_uframework”开头的文件夹，
  其中包含jinja2、werkzeuge、simplejson等模块，并将它们加入到sys.path中，
  想法真的十分巧妙。
+
+```python
+from deny import *
+
+@route('/')
+def hello():
+    return 'Hello World!'
+
+if __name__ == '__main__':
+    run()
+```
